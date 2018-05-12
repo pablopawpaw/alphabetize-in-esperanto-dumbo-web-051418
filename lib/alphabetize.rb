@@ -1,6 +1,7 @@
 def alphabetize(arr)
   # code here
   esperanto_alphabet = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
-  
-  arr.sort_by(esperanto_alphabet)
+  ascii = "@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\"
+  arr.sort_by{|string| string.tr(esperanto_alphabet, ascii)}
+
 end
